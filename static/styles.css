@@ -1,0 +1,142 @@
+body {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+.top-container {
+  background-color: #FCF8E8;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  color: #94B49F;
+  border-bottom: 2px solid #ECB390;
+}
+
+.title {
+  font-size: 3.5em;
+}
+
+.dropdown {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn {
+  color: #94B49F;
+  font-size: 1.75em;
+  font-weight: bold;
+  background-color: white;
+  border-color: white;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #94B49F;
+  border-color: white;
+}
+
+.btn:focus {
+  color: white;
+  background-color: #94B49F;
+  border-color: white;
+}
+
+.dropdown-item {
+  color: #94B49F;
+  border-color: white;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: #94B49F;
+  border-color: white;
+}
+
+.cards {
+  padding-top: 30px;
+  margin: 0 auto;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 40px;
+  color: #94B49F;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+.card-info-top {
+  padding: 10px;
+  color: #ECB390;
+  text-align: center;
+  background: #FCF8E8;
+  font-size: 1em;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  font-weight: bolder;
+  border-top: 2px solid #ECB390;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card-content {
+  line-height: 1.5;
+  font-size: 0.9em;
+  padding: 15px;
+  background: white;
+}
+
+.cafe-name {
+  font-weight: bolder;
+  font-size: 1.2em;
+  height: 45px;
+}
+
+.cafe-features {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.card-content>p:first-of-type {
+  margin-top: 0
+}
+
+.card-content>p:last-of-type {
+  margin-bottom: 0
+}
+
+.card-info-bottom {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #94B49F;
+  align-items: center;
+  background: #CEE5D0;
+  font-size: 0.8em;
+  border-bottom: 2px solid #94B49F;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.card-link {
+  color: #64968c;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}

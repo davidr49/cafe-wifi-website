@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Wifi Coffee Finder</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link href="{{ url_for('static', filename='styles.css')}}" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/567f40eaa8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="top-container">
+    <h1 class='title'>Work Cafe Finder <i class="fa-solid fa-mug-hot"></i></h1>
+    <h1 class='title'>London</h1>
+  </div>
+
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Check Locations
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <a class="dropdown-item" href="{{ url_for('home')}} ">All</a>
+      {% for location in locations %}
+      <a class="dropdown-item" href="{{ url_for('show_cafes', location_id=location)}} ">{{location}}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  <div class='cards'>
+    {% for cafe in cafes %}
+    <div class='card'>
+      <div class='card-info-top'>
+        <div>
+          {{ cafe.location }}
+        </div>
+      </div>
+      <img src="{{cafe.img_url}}" class='card-image' />
+      <div class='card-content'>
+        <p class='cafe-name'>{{ cafe.name }}</p>
+
+        <div class="cafe-features">
+          {% if cafe.has_toilet == 1: %}
+          <div>
+            <i class="fa-solid fa-toilet"></i>
+          </div>
+                      {% endif %}
+          {% if cafe.has_sockets == 1: %}
+          <div>
+            <i class="fa-solid fa-plug"></i>
+          </div>
+          {% endif %}
+          {% if cafe.has_wifi ==1: %}
+          <div>
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+          {% endif %}
+          {% if cafe.can_take_calls == 1: %}
+          <div>
+            <i class="fa-solid fa-phone"></i>
+          </div>
+                    {% endif %}
+        </div>
+      </div>
+
+      <div class='card-info-bottom'>
+        <div>
+          <i class="fa-solid fa-chair"></i> {{ cafe.seats }}
+        </div>
+        <div>
+          <i class="fa-solid fa-mug-hot"></i> {{cafe.coffee_price }}
+        </div>
+        <div>
+          <a href='{{ cafe.map_url }}' class='card-link'>View Map</a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
