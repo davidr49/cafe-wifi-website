@@ -17,7 +17,7 @@ body {
 }
 
 .title {
-  font-size: 3.5em;
+  font-size: 3.5rem;
 }
 
 .dropdown {
@@ -27,7 +27,7 @@ body {
 
 .btn {
   color: #94B49F;
-  font-size: 1.75em;
+  font-size: 1.75rem;
   font-weight: bold;
   background-color: white;
   border-color: white;
@@ -61,7 +61,7 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   gap: 40px;
   color: #94B49F;
   font-weight: bold;
@@ -78,7 +78,7 @@ body {
   color: #ECB390;
   text-align: center;
   background: #FCF8E8;
-  font-size: 1em;
+  font-size: 1rem;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   font-weight: bolder;
@@ -93,14 +93,14 @@ body {
 
 .card-content {
   line-height: 1.5;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   padding: 15px;
   background: white;
 }
 
 .cafe-name {
   font-weight: bolder;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   height: 45px;
 }
 
@@ -108,7 +108,7 @@ body {
   justify-content: space-between;
   display: flex;
   margin-top: 10px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .card-content>p:first-of-type {
@@ -126,7 +126,7 @@ body {
   color: #94B49F;
   align-items: center;
   background: #CEE5D0;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   border-bottom: 2px solid #94B49F;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
