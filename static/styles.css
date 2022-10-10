@@ -59,7 +59,7 @@ body {
 .cards {
   padding-top: 30px;
   margin: 0 auto;
-  max-width: 1150px;
+  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   gap: 40px;
